@@ -1,0 +1,1210 @@
+/* Estilos Gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F5F5F5; 
+
+}
+
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fefae0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+}
+
+.logo img {
+    width: 25%;
+    height: 10%;
+    margin-right: 10px;
+    
+}
+
+.logo h1 {
+    font-size: 24px;
+    color: #023047;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 25px;
+}
+
+nav ul li a {
+    font-family: 'Poppins', sans-serif; /* Altere para uma fonte mais moderna */
+    text-decoration: none;
+    color: #023047; /* Azul profundo */
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra sutil */
+    transition: color 0.3s ease-in-out;
+    padding: 10px 20px;
+}
+
+nav ul li a:hover {
+    
+    color: #0075af; /* Amarelo brilhante ao passar o mouse */
+}
+
+.menu-item{
+    color: fefae0;
+}
+
+#bem-vindo {
+    background-color: #fefae0;
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.welcome-content, .babysitters-join {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.welcome-content {
+    background-color: #40cae7;
+    
+}
+
+.babysitters-join {
+    background-color: #ffde7d;
+}
+
+.text-content {
+    max-width: 50%;
+}
+
+.text-content h2 {
+    font-size: 36px;
+    color: #023047;
+    line-height: 1.2;
+}
+
+.highlight {
+    background-color: #fca311;
+    color: #023047;
+    padding: 0 5px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.cta-button, .join-button {
+    background-color: #e63946;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.image-content img {
+    width: 300px;
+    height: auto;
+    border-radius: 15px;
+}
+
+footer {
+    background-color: #8ecae6;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+
+/* Seção de babás cadastradas */
+#babas-cadastradas {
+    padding: 40px 20px;
+    background-color: #e0f7fa;
+    text-align: center;
+}
+
+#babas-cadastradas h2 {
+    font-size: 32px;
+    color: #023047;
+    margin-bottom: 20px;
+}
+
+.baba-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centraliza os itens */
+    gap: 20px; /* Espaço entre os cards */
+}
+
+
+.baba-card {
+    width: 18%; /* Largura de cada card (aproximadamente 1/5 da linha) */
+    background-color: #ffcccc;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+
+
+.baba-card:hover {
+    transform: scale(1.05); /* Um leve zoom ao passar o mouse */
+}
+
+/* Responsividade - ajusta o número de cards por linha em telas menores */
+@media (max-width: 1200px) {
+    .baba-card {
+        width: calc(25% - 10px); /* 4 cards por linha */
+    }
+}
+
+@media (max-width: 900px) {
+    .baba-card {
+        width: calc(33.33% - 10px); /* 3 cards por linha */
+    }
+}
+
+@media (max-width: 600px) {
+    .baba-card {
+        width: calc(50% - 10px); /* 2 cards por linha */
+    }
+}
+
+@media (max-width: 400px) {
+    .baba-card {
+        width: 100%; /* 1 card por linha */
+    }
+}
+
+
+.baba-card img {
+    width: 50%; /* Para as imagens ocuparem toda a largura disponível do card */
+    height: 45%;
+    border-radius: 10px;
+}
+
+
+.ver-mais-button {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: #ff6666;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.ver-mais-button:hover {
+    background-color: #d62839; /* Cor ao passar o mouse */
+}
+
+
+/* Estilo do pop-up */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+@keyframes showModal {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.close {
+    color: #333;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Estilo da seleção de role (Pais ou Babá) */
+
+.login-button:hover {
+    background-color: #0056d4;
+}
+
+/* Opções extras: Esqueceu a senha e Criar conta */
+.extra-options {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.forgot-password {
+    color: #0066ff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.no-account {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.no-account a {
+    color: #0066ff;
+    text-decoration: none;
+}
+
+.no-account a:hover {
+    text-decoration: underline;
+}
+
+.login-button:hover {
+    background-color: #0056d4;
+}
+
+/* Opções extras: Esqueceu a senha e Criar conta */
+.extra-options {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.forgot-password {
+    color: #0066ff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.no-account {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.no-account a {
+    color: #0066ff;
+    text-decoration: none;
+}
+
+.no-account a:hover {
+    text-decoration: underline;
+}
+
+
+/* Opções extras: Esqueceu a senha e Criar conta */
+.extra-options {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.forgot-password {
+    color: #0066ff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.no-account {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.no-account a {
+    color: #0066ff;
+    text-decoration: none;
+}
+
+.no-account a:hover {
+    text-decoration: underline;
+}
+
+
+/* Estilo do pop-up de cadastro */
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    width: 100%;
+    position: relative;
+    animation: showModal 0.3s ease-in-out;
+}
+
+@keyframes showModal {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.close, .close-signup {
+    color: #333;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover, .close-signup:hover,
+.close:focus, .close-signup:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+
+.role-selection input[type="radio"] {
+    display: none;
+}
+
+.role-selection label {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.role-selection input[type="radio"]:checked + label {
+    background-color: #0066ff;
+    color: white;
+    font-weight: bold;
+}
+
+.role-selection label:hover {
+    background-color: #e0e0e0;
+}
+
+label {
+    font-size: 14px;
+    color: #666;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #333;
+}
+
+.signup-button, .login-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #0066ff;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.signup-button:hover, .login-button:hover {
+    background-color: #0056d4;
+}
+
+
+/* Estilo geral dos modais */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Estilo da caixa de conteúdo do modal */
+.modal-content {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 400px;
+    width: 90%;
+    margin: 100px auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    position: relative;
+    animation: scaleUp 0.3s ease-in-out;
+}
+
+@keyframes scaleUp {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.close, .close-signup {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    color: #4A90E2;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-family: 'Roboto', sans-serif;
+    color: #666;
+    font-size: 14px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #E5E5E5;
+    border-radius: 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    transition: border-color 0.2s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #4A90E2;
+    outline: none;
+}
+
+/* Botão de login/cadastro */
+.login-button, .signup-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4A90E2;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+.login-button:hover, .signup-button:hover {
+    background-color: #357ABD;
+}
+
+/* Estilo da seleção de role (Pais ou Babá) */
+.role-selection {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.role-selection label {
+    padding: 10px 20px;
+    background-color: #F0F0F0;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.role-selection input[type="radio"]:checked + label {
+    background-color: #4A90E2;
+    color: white;
+    font-weight: bold;
+}
+
+/* Link de esqueci a senha e criar conta */
+.extra-options {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.forgot-password {
+    color: #4A90E2;
+    text-decoration: none;
+    font-size: 12px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.no-account {
+    color: #666;
+    font-size: 12px;
+}
+
+.no-account a {
+    color: #4A90E2;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.no-account a:hover {
+    text-decoration: underline;
+}
+
+/* Animação de entrada */
+@keyframes fadeInModal {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+/* Estilos para a seção "Como Funciona" */
+.como-funciona-section {
+    background-color: #F5F5F5;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 50px 0;
+}
+
+/* Estilos para o título 'Como Funciona' */
+.como-funciona-section h2 {
+    font-size: 3rem;
+    background: linear-gradient(90deg, #007BFF, #00C6FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 50px;
+    position: relative;
+    display: inline-block;
+}
+
+.como-funciona-section h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: #007BFF;
+    margin: 10px auto 0;
+}
+
+
+.steps-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.step {
+    background-color: #eeebeb ;
+    border-radius: 15px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.step img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+.step h3 {
+    font-size: 1.5rem;
+    color: #3B82F6;
+    margin-bottom: 15px;
+}
+
+.step p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.step:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .steps-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .step {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+
+.sobre-nos {
+    background-color: #e0eefd;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+.sobre-nos h2 {
+    font-size: 3.2rem;
+    color: #007bff;
+    margin-bottom: 40px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+.sobre-nos h2::after {
+content: '';
+width: 100px;
+height: 4px;
+background-color: #007bff;
+display: block;
+margin: 20px auto 0;
+border-radius: 2px;
+}
+  
+.sobre-intro {
+font-size: 1.4rem;
+color: #333;
+max-width: 800px;
+margin: 0 auto 50px;
+line-height: 1.7;
+}
+  
+.sobre-content {
+display: flex;
+justify-content: space-around;
+flex-wrap: wrap;
+}
+  
+.sobre-item {
+flex: 1 1 30%;
+margin: 20px;
+padding: 30px;
+background-color: #fff;
+border-radius: 15px;
+box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+transition: transform 0.3s;
+}
+  
+.sobre-item:hover {
+transform: translateY(-10px);
+}
+
+.sobre-item img {
+max-width: 80px;
+margin-bottom: 20px;
+}
+  
+.sobre-item h3 {
+font-size: 2.2rem;
+color: #333;
+margin-bottom: 15px;
+text-transform: uppercase;
+font-weight: 600;
+letter-spacing: 2px;
+background: linear-gradient(90deg, #007bff, #00c2ff);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+position: relative;
+}
+
+.sobre-item h3::after {
+content: '';
+width: 60px;
+height: 3px;
+background-color: #007bff;
+display: block;
+margin: 10px auto 0;
+border-radius: 2px;
+}
+  
+.sobre-item h3:hover {
+color: #00c2ff;
+transition: all 0.3s ease-in-out;
+transform: scale(1.05);
+}
+  
+.sobre-item p {
+font-size: 1.1rem;
+color: #555;
+}
+
+@media (max-width: 768px) {
+.sobre-item {
+    flex: 1 1 100%;
+    margin-bottom: 20px;
+}
+}
+
+  
+.pagamento {
+    background-color: #e0eefd; /* Verde suave */
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.container-pagamento {
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items:stretch;
+    justify-content: space-around;
+    padding: 20px;
+    display:inline-table;
+}
+
+.titulo-pagamento {
+    font-size: 3rem; /* Aumenta o tamanho da fonte */
+    font-weight: bold; /* Deixa o texto em negrito */
+    color: transparent; /* Torna a cor do texto transparente */
+    background: linear-gradient(90deg, #66bb6a, #a5d6a7); /* Degradê de verde */
+    -webkit-background-clip: text; /* Aplica o degradê ao texto */
+    text-align: center; /* Centraliza o texto */
+    margin: 30px 0; /* Adiciona espaçamento acima e abaixo */
+    text-transform: uppercase; /* Transforma o texto em maiúsculas */
+    letter-spacing: 2px; /* Espaçamento entre letras */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Sombra leve para destaque */
+    transition: background 0.3s; /* Animação de transição de fundo */
+}
+
+
+
+
+.linha-tempo {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 20px;
+    position: relative;
+}
+
+.linha-tempo::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    width: 90%;
+    height: 4px;
+    background-color: #b9e4c9; /* Verde claro que conecta as etapas */
+    z-index: -1;
+}
+
+.etapa {
+    background-color: white;
+    border-radius: 15px;
+    padding: 30px;
+    width: 30%;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.etapa:hover {
+    transform: translateY(-10px);
+}
+
+.icone-wrapper {
+    background-color: #dcedc8; /* Fundo verde claro para os ícones */
+    border-radius: 50%;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+.icone-wrapper img {
+    width: 50px;
+}
+
+.etapa h3 {
+    color: #388e3c;
+    font-size: 1.6em;
+    margin-bottom: 10px;
+}
+
+.etapa p {
+    color: #4a4a4a;
+    font-size: 1em;
+}
+
+.btn-wrapper {
+    margin-top: 40px;
+}
+
+.btn-pagamento {
+    background-color: #388e3c;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-pagamento:hover {
+    background-color: #2e7d32;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .linha-tempo {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .etapa {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+
+/* Estilos gerais da seção FAQ */
+#faq {
+    background-color: #f9f9f9;
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para o título de FAQ */
+.faq-title {
+    font-size: 28px;
+    text-align: center;
+    color: #5884b4; /* Uma cor mais suave */
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 10px 0;
+}
+
+.faq-item h3 {
+    font-size: 18px;
+    cursor: pointer;
+    color: #3d3d3d;
+}
+
+.faq-answer {
+    display: none;
+    padding: 10px;
+    background-color: #f9f9f9; /* Deixando a caixa da resposta mais visível */
+    border-radius: 5px;
+    color: #333;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+    background-color: #e0f7fa; /* Destaque leve para a resposta */
+}
+
+.faq-item h3:hover {
+    color: #5884b4;
+}
+
+.contact-section {
+    background-color: #f5f5f5;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.contact-title {
+    font-size: 28px;
+    color: #5884b4;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.contact-item {
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contact-item img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+    transition: transform 0.3s;
+}
+
+.contact-item p {
+    font-size: 16px;
+    color: #333;
+}
+
+.contact-item:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-item:hover img {
+    transform: rotate(360deg);
+}
+
+
+.modal {
+    display: none; /* Escondido por padrão */
+    position: fixed; /* Fixo em relação à tela */
+    z-index: 1; /* Fica em cima de outros elementos */
+    left: 0;
+    top: 0;
+    width: 100%; /* Largura total */
+    height: 100%; /* Altura total */
+    overflow: auto; /* Habilita rolagem se necessário */
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* Margem no topo e centralizado */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Largura do modal */
+}
+
+.close-success {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-success:hover,
+.close-success:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.to-login-button {
+    background-color: #4CAF50; /* Cor de fundo verde */
+    border: none; /* Sem bordas */
+    color: white; /* Cor do texto */
+    padding: 10px 20px; /* Preenchimento */
+    text-align: righ; /* Centraliza o texto */
+    text-decoration: none; /* Remove o sublinhado */
+    display: inline-block; /* Permite margens */
+    font-size: 16px; /* Tamanho da fonte */
+    margin: 10px 0; /* Margem em cima e embaixo */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    border-radius: 5px; /* Bordas arredondadas */
+    transition: background-color 0.3s; /* Transição suave */
+}
+
+.to-login-button:hover {
+    background-color: #45a049; /* Cor de fundo ao passar o mouse */
+}
+
+
+/* Estilo do pop-up */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    width: 100%;
+    position: relative;
+    animation: showModal 0.3s ease-in-out;
+    overflow-y: auto;
+    max-height: 90vh; /* Limita a altura máxima para caber em telas menores */
+    box-sizing: border-box;
+}
+
+/* Estilos adicionais para telas menores */
+@media (max-width: 600px) {
+    .modal-content {
+        padding: 15px;
+        max-width: 90%;
+        font-size: 14px;
+    }
+}
+
+@media (max-height: 500px) {
+    .modal-content {
+        padding: 15px;
+        max-height: 80vh; /* Limita a altura do conteúdo para se ajustar em telas baixas */
+    }
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+/* Botão de login/cadastro */
+.login-button, .signup-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4A90E2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.extra-options {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 12px;
+}
+
+.extra-options a {
+    color: #4A90E2;
+    text-decoration: none;
+}
+
+.extra-options a:hover {
+    text-decoration: underline;
+}
+
+.hidden {
+    display: none;
+}
